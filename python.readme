@@ -1,0 +1,21 @@
+
+
+Il faut que le système pointe sur la bonne version de Python => 3.7 (qui n'est pas la version système).
+
+On a installé python 3.7 grâce au script install_python37.sh
+et c'est installé sous /usr/local
+
+On installe les configs avec:
+pour python:
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 20
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.7 5
+
+et python3:
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3 10
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.7 5
+
+
+Et on peut choisir la version avec:
+sudo update-alternatives --config python
+sudo update-alternatives --config python3
